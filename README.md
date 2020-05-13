@@ -30,6 +30,8 @@ mysql --host=34.86.114.15 --user=root --password
 When prompted for a password, enter `TimmyTregubov`.
 Congratulations! If you've reached screen like the one below, you're all set up! Let's move on to the tutorial.
 
+![](img/correct-mysql-setup.png)
+
 ### For Windows
 
 After downloading the zip from the link above (you can download without signing in/making an account, get the one thats 187.5MB). Unzip it.
@@ -60,6 +62,8 @@ Now you can finally get in by doing:
 mysql --host=34.86.114.15 --user=root --password
 ```
 When prompted for the password, it's `TimmyTregubov`.
+
+![](img/correct-mysql-setup.png)
 
 ## Step by Step
 
