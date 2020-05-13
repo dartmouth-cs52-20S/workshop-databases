@@ -209,20 +209,10 @@ SELECT * FROM secretmessage WHERE joke="what did the giraffe say when he walked 
 
 ### Keep moving down the chain of queries till your "nextjoke" column reads "done!" (reminder: each word of the message was in the "word" column of each table row your queries returned)
 
-<details>
-<summary>If you get stuck on any step, here are all three queries!</summary>
-
-```sql
-SELECT * FROM secretmessage WHERE joke="what did the giraffe say when he walked into a bar?";
-SELECT * FROM secretmessage WHERE joke="i was sitting in traffic the other day";
-SELECT * FROM secretmessage WHERE joke="i find some 1970s arstists rather vain";
-```
-</details>
-
 ### What does the message say??
 
 <details>
-<summary>If your terminal is nice and wide and want to see somethin cool:</summary>
+<summary>If your terminal is nice and wide and want to see something cool:</summary>
 Check this out!
 
 ```sql
