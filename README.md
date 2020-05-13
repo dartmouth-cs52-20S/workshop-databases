@@ -167,12 +167,20 @@ SELECT * FROM your_table;
 ```
 We want to ignore duplicate rows, so we added the `IGNORE` statement. This means that if `people` and `your_table` have rows with the same name, the merger will default to the values in `people`.
 
-### Other Ways to Merge Table Rows
-You can combine tables that share a key! For instance, you could combine a `Cars` table with an `OwnerID` column and a `People` table with a `PersonID` column to make one table with some columns from each. How would this work? To merge the two tables by ids and keep only the `Model` column from `Cars` and the `Age` column from `People`, you could run:
+### Other Ways to Merge Table Rows: Joins
+You can also combine tables that share a key! For instance, you could combine a `Cars` table with an `OwnerID` column and a `People` table with a `PersonID` column to make one table with some columns from each. How would this work? To merge the two tables by ids and keep only the `Model` column from `Cars` and the `Age` column from `People`, you could run:
 ```sql
 SELECT Cars.Model, People.Age
 FROM Cars INNER JOIN People ON Cars.OwnerID = People.PersonID;
 ```
+So, what's this `JOIN` thing you're seeing? It's a command that can be used to consolidate rows from multiple tables based on a related column between them.
+There are a couple of different types of joins that you should know about:
+* `(INNER) JOIN`: This is what you just saw in the example above. It returns all rows with matching values in all the chosen tables. If it's helpful. you can think of an intersection in mathematical terms!<br>![](https://www.w3schools.com/sql/img_innerjoin.gif)
+* `LEFT (OUTER) JOIN`: This returns all of the records that exist in the left table and any matched records from the right one.<br>![](https://www.w3schools.com/sql/img_leftjoin.gif) 
+* `RIGHT (OUTER) JOIN`: This returns all of the records from the right table and any matched records in the left one.<br>![](https://www.w3schools.com/sql/img_rightjoin.gif)
+* `FULL (OUTER) JOIN:` This returns all of the records when there's a match in either the left or right table. If it's helpful, you can think of a union in mathematical terms!<br>![](https://www.w3schools.com/sql/img_fulljoin.gif)
+
+For our purposes, we don't need to use any `JOIN`s, but they're important to know about!
 
 Now you've got an understanding of how to interact with a MySQL database! On to the fun part!
 
@@ -236,4 +244,5 @@ By now, you've learned:
 
 ## Resources
 * https://www.freecodecamp.org/news/basic-sql-commands/
+* https://www.w3schools.com/sql/sql_join.asp
 * Our lad Timmy for the Google Cloud SQL recommendation :wink: 
